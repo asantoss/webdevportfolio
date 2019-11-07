@@ -38,7 +38,8 @@ const Footer = () => {
 					mt: 3,
 					color: `text`,
 					fontWeight: `semibold`,
-					a: { color: `text` }
+					a: { color: `text` },
+					display: 'none'
 				}}>
 				<img
 					width='30'
