@@ -54,7 +54,28 @@ const Contact = ({ offset }) => {
 					<ContactMDX />
 				</Inner>
 				<div id='#contactForm'>
-					<input type='text' />
+					<a
+						href='mailto:alexsantosantana@live.com?subject=Hiring opportunity'
+						style={{
+							textTransform: 'capitalize',
+							textDecoration: 'none',
+							margin: '5px',
+							color: 'white',
+							border: '2px solid white',
+							backgroundColor: 'transparent',
+							opacity: '0.8',
+							padding: '10px 16px',
+							borderRadius: '12px',
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'space-between',
+							cursor: 'pointer',
+							'&:hover': {
+								backgroundColor: 'grey'
+							}
+						}}>
+						Contact Me
+			</a>
 				</div>
 
 				<Footer />
