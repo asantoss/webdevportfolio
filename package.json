@@ -24,9 +24,7 @@
     "gatsby-plugin-netlify": "^2.1.6",
     "gatsby-plugin-offline": "^2.2.7",
     "gatsby-plugin-sharp": "^2.2.36",
-    "gatsby-plugin-smoothscroll": "^1.0.3",
     "gatsby-remark-code-buttons": "^2.0.1",
-    "gatsby-transformer-sharp": "^2.3.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-icons": "^3.7.0"

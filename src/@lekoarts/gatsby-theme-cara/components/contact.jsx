@@ -8,7 +8,6 @@ import SVG from './svg';
 import { UpDown, UpDownWide, waveAnimation } from '../styles/animations';
 import ContactMDX from '../sections/contact.mdx';
 import Footer from './footer';
-import { useRef } from 'react';
 
 const InnerWave = styled.div`
 	path {
@@ -17,7 +16,6 @@ const InnerWave = styled.div`
 `;
 
 const Contact = ({ offset }) => {
-	const contactRef = useRef();
 	return (
 		<div id='#contactme'>
 			<Divider fill='divider' speed={0.2} offset={offset}>

@@ -146,7 +146,7 @@ const Hero = ({ offset }) => (
 			<Inner>
 				<Intro />
 			</Inner>
-			<a
+			<button
 				onClick={() =>
 					window.open(
 						'mailto:alexsantosantana@live.com?subject=Hiring opportunity'
@@ -171,7 +171,7 @@ const Hero = ({ offset }) => (
 					}
 				}}>
 				Contact Me
-			</a>
+			</button>
 		</Content>
 	</div>
 );
