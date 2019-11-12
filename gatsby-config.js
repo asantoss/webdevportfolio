@@ -4,9 +4,17 @@ require(`dotenv`).config({
 
 module.exports = {
 	siteMetadata: {
-		siteTitleAlt: `Alexander Santos`
+		siteTitleAlt: `Alexander Santos Santana`
 	},
 	plugins: [
+		{
+			resolve: `gatsby-plugin-material-ui`,
+			options: {
+				stylesProvider: {
+					injectFirst: true
+				}
+			}
+		},
 		{
 			resolve: `@lekoarts/gatsby-theme-cara`,
 			options: {}
