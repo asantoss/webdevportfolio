@@ -105,15 +105,21 @@ const About = ({ offset }) => (
       />
     </Divider>
     <Content speed={0.4} offset={offset}>
-      <Inner>
-        <div style={{ display: "flex", justifyContent: "space-envely" }}>
-          <div style={{ width: "calc(100%-250px)" }}>
+      <Inner about="1">
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-envely",
+            width: "100%",
+            height: "100%"
+          }}
+        >
+          <div style={{ width: "calc(80%-250px)" }}>
             <AboutMDX />
           </div>
           <img
             style={{
-              width: "200px",
-              height: "200px",
+              width: "100px",
               borderRadius: "50%",
               alignSelf: "center"
             }}
