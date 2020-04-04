@@ -174,7 +174,7 @@ const Hero = ({ offset }) => (
 				<a
 					target='_blank'
 					rel='noopener noreferrer'
-					href='https://drive.google.com/open?id=1v37Nt3wweDOclCFtCuRhsa0KJN1LlFN2TZvu4jhNoJs'
+					href='https://drive.google.com/file/d/1Uc2IRyZNZtYT2PIUqckNXs1S2VrBxRRl/view?usp=sharing'
 					style={{
 						textTransform: 'capitalize',
 						textDecoration: 'none',
