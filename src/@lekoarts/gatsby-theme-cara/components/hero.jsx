@@ -166,8 +166,8 @@ const Hero = ({ offset }) => (
 						justifyContent: 'space-between',
 						cursor: 'pointer',
 						'&:hover': {
-							backgroundColor: 'grey'
-						}
+							backgroundColor: 'grey',
+						},
 					}}>
 					Contact Me
 				</a>
@@ -190,8 +190,8 @@ const Hero = ({ offset }) => (
 						justifyContent: 'space-between',
 						cursor: 'pointer',
 						'&:hover': {
-							backgroundColor: 'grey'
-						}
+							backgroundColor: 'grey',
+						},
 					}}>
 					Resume
 				</a>
