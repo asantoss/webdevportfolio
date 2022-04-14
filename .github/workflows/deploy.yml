@@ -34,7 +34,7 @@ jobs:
         with:
           files: |
             package.json
-          commit-message: Updates the front end to v${{}}
+          commit-message: Updates the front end to v${{VERSION}}
           ref: refs/heads/UAT
       - name: Set Version Variable
         run: VERSION=$(npm version)
