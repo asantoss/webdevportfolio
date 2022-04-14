@@ -11,7 +11,7 @@ jobs:
     runs-on: 'ubuntu-latest'
     steps:
       - name: PR Number
-         run: |
+        run: |
           echo PR #${{ github.event.number }} has been merged
       - name: Checkout
         uses: actions/checkout@master
