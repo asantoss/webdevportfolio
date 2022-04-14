@@ -34,5 +34,5 @@ jobs:
       - name: Tag Commit
         uses: EndBug/latest-tag@latest
         with:
-          tag-name:  ${{ steps.vars.outputs.tag }}
+          tag-name:  "${{ steps.vars.outputs.tag }}"
           description: 'Updates the front end to ${{ steps.vars.outputs.tag }}'
