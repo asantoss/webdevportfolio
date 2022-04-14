@@ -2,8 +2,8 @@ name: 'Release Application'
 
 on:
   pull_request:
-  types: [ closed ]
-    branches: ['master', 'QA2', 'UAT']
+    types: [ closed ]
+      branches: ['master', 'QA2', 'UAT']
 jobs:
   release-uat:
     name: 'Publish UAT Update'
