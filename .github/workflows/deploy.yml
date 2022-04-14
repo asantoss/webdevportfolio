@@ -26,13 +26,11 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           files: |
-            ./package.json
-          commit-message: Updates the front end to v${{env.VERSION}}
+            package.json
+          commit-message: Updates the front end version
           ref: refs/heads/master
-      - name: Set Version Variable
-        run: VERSION=$(npm version)
       - name: Tag Commit
         uses: rickstaa/action-create-tag@v1
         with:
-          tag: 'uat-'
+          tag: 'uat-${{env.VERSION}}'
           message: 'Updates the front end to $TAG'
