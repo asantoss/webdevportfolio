@@ -2,16 +2,16 @@ name: 'Release Application'
 
 on:
   pull_request:
-    types: [ closed ]
+    types: [closed]
     branches: ['master', 'QA2', 'UAT']
 jobs:
   release-uat:
-    name: 'Publish UAT Update'
+    name: Publish UAT Update
     if: github.ref == 'refs/heads/UAT' && github.event.pull_request.merged == true
     runs-on: 'ubuntu-latest'
     steps:
-       - name: "PR Number"
-         run: |
+      - name: PR Number
+        run: |
           echo PR #${{ github.event.number }} has been merged
       - name: Checkout
         uses: actions/checkout@master
@@ -38,12 +38,12 @@ jobs:
           tag: 'uat-'
           message: 'Updates the front end to $TAG'
   release-prod:
-    name: 'Publish PROD Update'
+    name: Publish PROD Update
     if: github.ref == 'refs/heads/master' && github.event.pull_request.merged == true
     runs-on: 'ubuntu-latest'
     steps:
-      - name: "PR Number"
-         run: |
+      - name: PR Number
+        run: |
           echo PR #${{ github.event.number }} has been merged
       - name: Checkout
         uses: actions/checkout@master
@@ -70,11 +70,11 @@ jobs:
           tag: 'prod-'
           message: 'Updates the front end to $TAG'
   release-QA2:
-    name: 'Publish QA2 Update'
+    name: Publish QA2 Update
     if: github.ref == 'refs/heads/QA2' && github.event.pull_request.merged == true
     runs-on: 'ubuntu-latest'
     steps:
-      - name: "PR Number"
+      - name: PR Number
         run: |
           echo PR #${{ github.event.number }} has been merged
       - name: Checkout
