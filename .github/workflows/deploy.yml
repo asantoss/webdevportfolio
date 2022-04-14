@@ -19,7 +19,10 @@ jobs:
         with:
           node-version: 14.x
       - name: Bump Version
-        run: VERSION=$(npm version patch --no-git-tag-version)
+        run: |
+          VERSION=$(npm version patch --no-git-tag-version) \
+          TAG_NAME=prod-$VERSION) \
+          echo ::set-output name=tag::$TAG_NAME
       - name: Commit file
         uses: swinton/commit@v2.x
         env:
@@ -27,10 +30,10 @@ jobs:
         with:
           files: |
             package.json
-          commit-message: Updates the front end version
+          commit-message: Updates the front end version ${{ steps.vars.outputs.tag }}
           ref: refs/heads/master
       - name: Tag Commit
         uses: rickstaa/action-create-tag@v1
         with:
-          tag: 'uat-${{env.VERSION}}'
-          message: 'Updates the front end to $TAG'
+          tag: ${{ steps.vars.outputs.tag }}
+          message: 'Updates the front end to ${{ steps.vars.outputs.tag }}'
