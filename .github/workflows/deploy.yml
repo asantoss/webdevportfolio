@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 14.x
       - name: Bump Version
-        run: npm version patch git-tag-version false
+        run: npm version patch --no-git-tag-version
       - name: Commit file
         uses: swinton/commit@v2.x
         env:
