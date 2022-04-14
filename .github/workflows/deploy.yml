@@ -26,7 +26,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           files: |
-            package.json
+            ./package.json
           commit-message: Updates the front end to v${{env.VERSION}}
           ref: refs/heads/UAT
       - name: Set Version Variable
