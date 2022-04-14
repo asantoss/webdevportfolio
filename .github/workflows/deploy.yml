@@ -28,7 +28,7 @@ jobs:
           files: |
             ./package.json
           commit-message: Updates the front end to v${{env.VERSION}}
-          ref: refs/heads/UAT
+          ref: refs/heads/master
       - name: Set Version Variable
         run: VERSION=$(npm version)
       - name: Tag Commit
