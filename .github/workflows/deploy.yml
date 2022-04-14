@@ -34,5 +34,5 @@ jobs:
       - name: Tag Commit
         uses: rickstaa/action-create-tag@v1
         with:
-          tag: 'prod-$VERSION'
-          message: 'Updates the front end to prod-$VERSION'
+          tag-name:  ${{ steps.vars.outputs.tag }}
+          description: 'Updates the front end to  ${{ steps.vars.outputs.tag }}'
