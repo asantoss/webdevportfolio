@@ -21,8 +21,7 @@ jobs:
       - name: Bump Version
         run: |
           VERSION=$(npm version patch --no-git-tag-version) \
-          TAG_NAME=prod-$VERSION) \
-          echo ::set-output name=tag::$TAG_NAME
+          echo ::set-output name=tag::prod-$VERSION
       - name: Commit file
         uses: swinton/commit@v2.x
         env:
