@@ -21,7 +21,7 @@ jobs:
       - name: Bump Version
         run: |
           VERSION=$(npm version patch --no-git-tag-version) \
-          echo ::set-output name=tag::prod-$VERSION
+          echo ::set-env name=tag::prod-$VERSION
       - name: Commit file
         uses: swinton/commit@v2.x
         env:
@@ -29,10 +29,10 @@ jobs:
         with:
           files: |
             package.json
-          commit-message: Updates the front end version ${{ steps.vars.outputs.tag }}
+          commit-message: Updates the front end version ${{ env.tag }}
           ref: refs/heads/master
       - name: Tag Commit
         uses: EndBug/latest-tag@latest
         with:
           tag-name:  "${{ steps.vars.outputs.tag }}"
-          description: 'Updates the front end to ${{ steps.vars.outputs.tag }}'
+          description: 'Updates the front end to ${{ env.tag }}'
