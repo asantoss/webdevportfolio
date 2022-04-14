@@ -10,8 +10,9 @@ jobs:
     if: github.ref == 'refs/heads/UAT' && github.event.pull_request.merged == true
     runs-on: 'ubuntu-latest'
     steps:
-       - run: |
-        echo PR #${{ github.event.number }} has been merged
+       - name: "PR Number"
+         run: |
+          echo PR #${{ github.event.number }} has been merged
       - name: Checkout
         uses: actions/checkout@master
       - name: setup Node
@@ -41,6 +42,9 @@ jobs:
     if: github.ref == 'refs/heads/master' && github.event.pull_request.merged == true
     runs-on: 'ubuntu-latest'
     steps:
+      - name: "PR Number"
+         run: |
+          echo PR #${{ github.event.number }} has been merged
       - name: Checkout
         uses: actions/checkout@master
       - name: setup Node
@@ -70,6 +74,9 @@ jobs:
     if: github.ref == 'refs/heads/QA2' && github.event.pull_request.merged == true
     runs-on: 'ubuntu-latest'
     steps:
+      - name: "PR Number"
+        run: |
+          echo PR #${{ github.event.number }} has been merged
       - name: Checkout
         uses: actions/checkout@master
       - name: setup Node
