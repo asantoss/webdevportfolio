@@ -21,6 +21,13 @@ jobs:
           node-version: 14.x
       - name: Bump Version
         run: npm version patch --no-git-tag-version
+      - name: Set Version Variable
+        run: |
+        VERSION=$(cat package.json \
+        grep version \
+        head -1 \
+        awk -F: '{ print $2 }' \
+        sed 's/[",]//g')
       - name: Commit file
         uses: swinton/commit@v2.x
         env:
@@ -28,7 +35,7 @@ jobs:
         with:
           files: |
             package.json
-          commit-message: Committing ./package.json
+          commit-message: Updates the front end to v${{}}
           ref: refs/heads/UAT
       - name: Set Version Variable
         run: VERSION=$(npm version)
