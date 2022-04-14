@@ -2,8 +2,7 @@ name: 'Release Application'
 
 on:
   pull_request:
-    types:
-      - 'closed'
+  types: [ closed ]
     branches: ['master', 'QA2', 'UAT']
 jobs:
   release-uat:
@@ -11,6 +10,8 @@ jobs:
     if: github.ref == 'refs/heads/UAT' && github.event.pull_request.merged == true
     runs-on: 'ubuntu-latest'
     steps:
+       - run: |
+        echo PR #${{ github.event.number }} has been merged
       - name: Checkout
         uses: actions/checkout@master
       - name: setup Node
