@@ -19,14 +19,7 @@ jobs:
         with:
           node-version: 14.x
       - name: Bump Version
-        run: npm version patch --no-git-tag-version
-      - name: Set Version Variable
-        run: |
-          VERSION=$(cat package.json \
-          grep version \
-          head -1 \
-          awk -F: '{ print $2 }' \
-          sed 's/[",]//g')
+        run: VERSION=$(npm version patch --no-git-tag-version)
       - name: Commit file
         uses: swinton/commit@v2.x
         env:
