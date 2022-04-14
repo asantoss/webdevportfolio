@@ -32,7 +32,7 @@ jobs:
           commit-message: Updates the front end version ${{ steps.vars.outputs.tag }}
           ref: refs/heads/master
       - name: Tag Commit
-        uses: rickstaa/action-create-tag@v1
+        uses: EndBug/latest-tag@latest
         with:
-          tag-name:  ${{ steps.vars.outputs.tag }}
-          description: 'Updates the front end to  ${{ steps.vars.outputs.tag }}'
+          tag-name:  'prod-$VERSION'
+          description: 'Updates the front end to $VERSION'
